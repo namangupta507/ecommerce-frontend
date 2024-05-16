@@ -9,7 +9,7 @@ const HomeScreen = () => {
   
   useEffect(()=>{
     const fetchProducts=async () => {
-      const {data}=await axios.get('/api/products');
+      const {data}=await axios.get('https://ecommerce2-1ssj.onrender.com/api/products');
       console.log(data)
       setProducts(data);
     };
