@@ -21,14 +21,14 @@ const ProductScreen = () => {
   
     useEffect(()=>{
         const fetchProduct=async ()=>{
-            const {data}=await axios.get(`https://ecommerce2-1ssj.onrender.com/api/product/${_id}`)
+            const {data}=await axios.get(`https://ecommerce-backend1-ov67.onrender.com/api/product/${_id}`)
             setProduct(data);
         };
         fetchProduct()
     },[_id])
     const addToCart = async () => {
         try {
-          const response = await axios.post('https://ecommerce2-1ssj.onrender.com/api/addProduct', { product,quantity });
+          const response = await axios.post('https://ecommerce-backend1-ov67.onrender.com/api/addProduct', { product,quantity });
           console.log('Product added to cart:', response.data);
           setMessage(response.data.message);
           setShowAlert(true);
