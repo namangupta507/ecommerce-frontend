@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={<App/>}>
+  <Route path='/ecommerce-frontend' element={<App/>}>
     <Route path='/' index='true' element={<HomeScreen/>}></Route>
     <Route path='/product/:_id' element={<ProductScreen/>}></Route>
   </Route>
